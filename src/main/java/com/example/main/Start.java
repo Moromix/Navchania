@@ -1,14 +1,18 @@
 package com.example.main;
 
+import com.example.DemoApplication;
 import com.example.interfaces.Robot;
 import com.example.interfaces.RobotConveyor;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-
-
+@SpringBootApplication
 public class Start {
 	public static void main(String[] args) {
+		SpringApplication.run(DemoApplication.class, args);
+
 		ApplicationContext context = new ClassPathXmlApplicationContext("all_context.xml");
 		// ModelT1000 t1000 = (ModelT1000) context.getBean("t1000");
 		// BaseModel baseModel = (BaseModel) context.getBean("baseModel");
